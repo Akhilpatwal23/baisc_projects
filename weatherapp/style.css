@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&family=Poppins:wght@100;200;400&family=Quicksand&display=swap');
+
+*{
+  font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+
+}
+
+.box{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    width: 330px;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #97c6f6;
+    overflow: hidden;
+}
+#weathercon{
+    display: grid;
+    place-items: center;
+    
+
+}
+#icon{
+    display: block;
+    line-height: 100px; 
+    
+    margin: 0 auto;
+    margin-top: 30%;
+    text-align: center;
+    font-size: 45px;
+}
+
+.location{
+     text-align: center;
+}
+p{
+    text-align: center;
+}
+h1,h3 {
+    text-align: center;
+}
+
+.same{
+    color: rgba(72, 72, 72, 0.616);
+}
+
+.wave {
+    width: 29rem;
+    height: 484px;
+    border-radius: 178px;
+    position: absolute;
+    bottom: -200px;
+    z-index: -1;
+  }
+  
+  .wave.-one {
+    animation: rotate 5s linear infinite;
+    left: -60px;
+    background-color: hsla(0, 0%, 93%, 0.459);
+    
+    opacity: 0.5;
+  }
+  
+  .wave.-two {
+    animation: rotate 4s linear infinite;
+    left: -40px;
+    background-color: hsla(0, 33%, 97%, 0.575);
+  }
+  
+  .wave.-three {
+    animation: rotate 3s linear infinite;
+    left: -54px;
+    background-color:hsla(0, 0%, 100%, 0.683);
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes wave {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px); /* Adjust the value to control the wave's height */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+  @media (max-width: 600px) {
+    .box {
+      width: 90vw;
+      height: 80vh;
+    }
+
+    .wave {
+      top: 85%;
+    }
+
+    #weathercon {
+      font-size: 5em;
+    }
+
+    .info {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-height: 500px) {
+    .box {
+      height: 80vh;
+    }
+
+    .wave {
+      top: 115%;
+    }
+  }
+  body > span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+  }
